@@ -1,0 +1,797 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    margin: 10px;
+    padding: 15px;
+    width: 100%;
+}
+
+
+.container-fluid .moviblelogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('../img/Caplogo.png');
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.logo.cambio-imagen {
+    content: url('../img/DECORS\ HOUSE\ logo.png');
+    transition: all 5s ease-out;
+}
+
+.moviblelogo.cambio-fondo {
+    background-image: url('../img/Taplogo.png');
+    transition: all 5s ease-out;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.moviblelogo .logo {
+    padding: 10px 10px 10px 10px;
+    cursor: pointer;
+    height: 100px;
+    border-bottom: 2px solid #fff;
+    transition: border-bottom 5s ease-out;
+    transition: background-image 5s ease-out;
+}
+
+header {
+    background-color: #4A3603;
+    padding: 10px;
+    /* Espaciado interno del encabezado */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+header:hover {
+    background-color: #503e11;
+}
+
+header i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    font-size: 24px;
+    color: #fff;
+    padding: 10px 20px;
+
+}
+
+header i:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+
+.horario,
+.lugar,
+.preguntas {
+    color: #fff;
+    opacity: 0.5;
+    font-size: 14px;
+    /* Tamaño de fuente para los textos */
+    margin: 0;
+    /* Elimina el margen predeterminado del párrafo */
+}
+
+/*barra*/
+.navbar {
+    background-color: #fff;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Box shadow for a subtle effect */
+}
+
+.navbar-brand {
+    color: #fff;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-weight: 400;
+    /* Make the brand text bold */
+}
+
+.navbar-nav .nav-link {
+    border-radius: 20px 20px 20px 20px;
+    background: #181818;
+    margin-left: 10px;
+    padding: 10px;
+    color: #fff;
+    /* Link color */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+    /* Change color on hover */
+}
+
+/* Style the search input and button */
+.form-control {
+    margin-right: 5px;
+}
+
+/* Style the shopping cart icon */
+.fa-shopping-cart {
+    font-size: 24px;
+    color: #007bff;
+    /* Icon color */
+    cursor: pointer;
+}
+
+.fa-shopping-cart:hover {
+    color: #0056b3;
+    /* Change color on hover */
+}
+
+
+/*Inicio*/
+.Inicio {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.Inicio img {
+    width: 100%;
+    height: auto;
+}
+
+.Inicio h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin: 0;
+    color: #EA7509;
+    font-size: 2em;
+    /* Ajusta el tamaño de la fuente según sea necesario */
+}
+
+.Inicio h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    font-size: 1.7em;
+    /* Ajusta el tamaño de la fuente según sea necesario */
+}
+
+/*quienes somos*/
+.QuienesSomos {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../img/ezgif 1.png');
+    height: 100vh;
+}
+
+QuienesSomos .text-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    /* Ajusta el ancho máximo según tus necesidades */
+}
+
+
+
+.QuienesSomos h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #EA7509;
+    padding: 5%;
+    background: rgba(0, 0, 0, 0.6);
+    font-size: 3em;
+    /* Ajusta el tamaño de la fuente según tus necesidades */
+
+}
+
+.QuienesSomos p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 5%;
+    font-size: 1.5em;
+    /* Ajusta el tamaño de la fuente según tus necesidades */
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/*catalogo*/
+.cuerpo {
+    background: url("../img/image 3.png");
+    justify-content: center;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.cuerpo h1 {
+    text-align: center;
+    color: rgb(214, 214, 8);
+    font-size: 50px;
+    font-weight: normal;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    width: 200px;
+    margin: 20px;
+    margin-top: 40px;
+    margin-bottom: 70px;
+    font-family: 'Popins', sans-serif;
+}
+
+.card-image {
+    height: 250px;
+    margin-bottom: 15px;
+    background-size: cover;
+}
+
+.car-1 {
+    background-image: url('../img/image 2.png');
+    margin-top: 5px;
+}
+
+.car-2 {
+    background-image: url('../img/image 4.png');
+    margin-top: 5px;
+}
+
+.car-3 {
+    background-image: url('../img/image 5.png');
+    margin-top: 5px;
+}
+
+.car-4 {
+    background-image: url('../img/image 6.png');
+    margin-top: 5px;
+}
+
+.car-5 {
+    background-image: url('../img/image 8.png');
+    margin-top: 5px;
+}
+
+.card h2 {
+    padding: 10px;
+}
+
+.card p {
+    padding: 10px;
+}
+
+.card a {
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    margin: 20px 50px;
+    text-decoration: none;
+    font-family: 'Popins', sans-serif;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    transition: all 1s ease-in-out;
+}
+
+.card a:hover {
+    background-color: rgb(66, 65, 65);
+    color: white;
+}
+
+.--h2 {
+    font-size: 20px;
+}
+
+
+/* Estilos para la sección "Inspírate" */
+.Inspirate {
+    background-image: radial-gradient(circle at 90.56% 107.92%, #675428 0, #675428 12.5%, #675428 25%, #675428 37.5%, #675428 50%, #675428 62.5%, #675428 75%, #675428 87.5%, #675428 100%);
+    padding: 50px;
+    text-align: center;
+}
+
+/* Estilos para el título */
+.Inspirate h1 {
+    font-size: 24px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Estilos para los contenedores de imágenes y textos */
+.image1,
+.image2 {
+    display: inline-block;
+    width: 45%;
+    text-align: center;
+    margin: 0px 10px;
+}
+
+/* Estilos para las imágenes */
+.image1 img,
+.image2 img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos para los párrafos */
+.image1 p,
+.image2 p {
+    font-size: 16px;
+    color: #fff;
+    padding: 10px;
+    margin-top: -10px;
+}
+
+
+
+/* Estilos para los pÃ¡rrafos */
+.image1 p,
+.image2 p {
+    font-size: 16px;
+    color: #fff;
+    background-color: #181818;
+}
+
+
+
+
+
+
+/* Estilos para la secciÃ³n "Contacto" */
+.contact {
+    background-color: #4A3603;
+    /* Color de fondo */
+    color: #fff;
+    /* Color de texto */
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/*footer */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+}
+
+/* Estilos para las secciones del footer */
+.footer .info,
+.footer .empresa,
+.footer .redessociales {
+    margin: 10px;
+    width: calc(25% - 20px);
+    flex: 1;
+}
+
+.redessociales .fa-instagram {
+    background-color: #d10cb4;
+    padding: 5px 5px;
+}
+
+.redessociales .fa-instagram:hover {
+    color: #d10cb4;
+    background: #fff;
+}
+
+.redessociales .fa-facebook {
+    background-color: #0c33d1;
+    padding: 5px 5px;
+}
+
+.redessociales .fa-facebook:hover {
+    color: #0c33d1;
+    background: #FFF;
+}
+
+.redessociales .fa-whatsapp {
+    background-color: #0cd130;
+    padding: 5px 5px;
+}
+
+.redessociales .fa-whatsapp:hover {
+    color: #0cd130;
+    background: #fff;
+}
+
+.redessociales .fa-tiktok {
+    padding: 5px 5px;
+}
+
+.redessociales .fa-tiktok:hover {
+    color: #000;
+    background: #fff;
+}
+
+
+/* Estilos para el elemento .copy en una pantalla ancha */
+.footer .copy {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    /* AÃ±ade un relleno para acercar los elementos */
+}
+
+/* Estilos para los tÃ­tulos en el footer */
+.footer h3 {
+    font-size: 18px;
+}
+
+/* Estilos para los enlaces en el footer */
+.footer a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Estilos para las imÃ¡genes en el footer */
+.footer .imagen img {
+    height: 100px;
+    width: 100px;
+    border: 1px solid #fff;
+}
+
+
+
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 20px;
+    }
+
+    /*barra*/
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: #000;
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* Box shadow for a subtle effect */
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-weight: 400;
+        /* Make the brand text bold */
+    }
+
+    .navbar-nav .nav-link {
+        border-radius: 20px 20px 20px 20px;
+        background: #181818;
+        margin-left: 10px;
+        padding: 10px;
+        color: #fff;
+        margin-top: 10px;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #007bff;
+        /* Change color on hover */
+    }
+
+    /* Style the search input and button */
+    form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .form-control {
+        margin: 5px;
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    /* Style the shopping cart icon */
+    .fa-shopping-cart {
+        position: relative;
+        margin-top:10px ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: #007bff;
+        /* Icon color */
+        cursor: pointer;
+    }
+
+    .fa-shopping-cart:hover {
+        color: #0056b3;
+        /* Change color on hover */
+    }
+
+    .container .moviblelogo {
+        height: 50vh;
+    }
+
+    .moviblelogo .logo {
+        height: 50px;
+    }
+
+    header {
+        padding: 5px;
+    }
+
+    header i {
+        padding: 5px 10px;
+        font-size: 20px;
+    }
+
+    header i:hover {
+        background-color: transparent;
+    }
+
+    .horario,
+    .lugar,
+    .preguntas {
+        font-size: 12px;
+    }
+
+    .barra {
+        padding: 5px;
+    }
+
+    .link a {
+        padding: 5px 5px;
+    }
+
+    .search,
+    .fa-magnifying-glass,
+    #searchinput {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .fa-shopping-cart {
+        padding: 5px 10px;
+    }
+
+    .Inicio h1,
+    .Inicio h3 {
+        font-size: 1.5em;
+    }
+
+    .QuienesSomos h1,
+    .QuienesSomos p {
+        font-size: 2em;
+    }
+
+    .cuerpo h1 {
+        font-size: 30px;
+    }
+
+    .card {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .card a {
+        margin: 10px;
+    }
+
+    .Inspirate h1 {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .image1,
+    .image2 {
+        width: 100%;
+        margin: 0px;
+    }
+
+    .contact {
+        padding: 10px;
+    }
+
+    .footer .info,
+    .footer .empresa,
+    .footer .redessociales {
+        width: 100%;
+        margin: 5px;
+    }
+
+    .footer .imagen img {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+/* Responsive Styles for Tablet Devices */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container-fluid {
+        padding: 20px;
+    }
+
+    /*barra*/
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: #000;
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* Box shadow for a subtle effect */
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-weight: 400;
+        /* Make the brand text bold */
+    }
+
+    .navbar-nav .nav-link {
+        border-radius: 20px 20px 20px 20px;
+        background: #181818;
+        margin-left: 10px;
+        padding: 10px;
+        color: #fff;
+        margin-top: 10px;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #007bff;
+        /* Change color on hover */
+    }
+
+    /* Style the search input and button */
+    form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .form-control {
+        margin: 5px;
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    /* Style the shopping cart icon */
+    .fa-shopping-cart {
+        position: relative;
+        margin-top:10px ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: #007bff;
+        /* Icon color */
+        cursor: pointer;
+    }
+
+    .fa-shopping-cart:hover {
+        color: #0056b3;
+        /* Change color on hover */
+    }
+    .moviblelogo .logo {
+        height: 70px;
+    }
+
+    header i {
+        padding: 10px 15px;
+        font-size: 24px;
+    }
+
+    .barra {
+        padding: 10px;
+    }
+
+    .link a {
+        padding: 10px 15px;
+    }
+
+    .fa-shopping-cart {
+        padding: 10px 15px;
+    }
+
+    .Inicio h1,
+    .Inicio h3 {
+        font-size: 2.5em;
+    }
+
+    .QuienesSomos h1,
+    .QuienesSomos p {
+        font-size: 2.5em;
+    }
+
+    .cuerpo h1 {
+        font-size: 40px;
+    }
+
+    .card {
+        width: 300px;
+        margin: 20px;
+    }
+
+    .card a {
+        margin: 20px 50px;
+    }
+
+    .Inspirate h1 {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+
+    .image1,
+    .image2 {
+        width: 45%;
+        margin: 0px 10px;
+    }
+
+    .contact {
+        padding: 20px;
+    }
+
+    .footer .info,
+    .footer .empresa,
+    .footer .redessociales {
+        width: calc(33.33% - 20px);
+        margin: 10px;
+    }
+
+    .footer .imagen img {
+        height: 75px;
+        width: 75px;
+    }
+}

@@ -1,0 +1,303 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Header */
+header{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    background-color: #4a3603;
+    justify-content: space-between;
+    color: #fff;
+    align-items: center;
+}
+/* Hora */
+.hour{
+    margin-left: 2rem;
+    margin-top: 1rem;
+    width: 21rem;
+    height: 40px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+}
+.cont-item{
+    display: flex;
+    margin-top: 0.7rem;
+}
+.hd-img{
+    width: 17px;
+    height: 24.5px;
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+}
+.txt-item{
+    width: 208px;
+    height: 40px;
+    flex-shrink: 0;
+}
+/* Barra de navegacion */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(104, 46, 3, 0.69) 0%, #4A3603 84.9%);
+}
+/* Logo */
+.logo{
+    padding: 1rem;
+    margin-left: 2rem;
+    width: 10rem;
+    height: 4.5rem;
+}
+
+.enlaces{
+    display: flex;
+    color: #fff;
+    
+}
+
+/* .barra-navegacion a:hover {
+    color: #D8BA56;
+    transition: all 0.5s ease;
+} */
+
+/* Item */
+
+.item{
+    width: 7.5rem;
+    height: 2px;
+    color: #fff;
+    margin-left: 1rem;
+}
+.i1{
+    color: #D8BA56;
+}
+.item:hover{
+    color: #D8BA56;
+}
+.conten{
+    width: 7.5rem;
+    height: 2px;
+    margin-right: 1.7rem;
+    margin-top: -4rem;
+}
+.item-img{
+    height: 3.4rem;
+    width: 3.4rem;
+
+}
+
+/* Portada */
+.port{
+    display: inline-flex;
+    width: 100%;
+    height: 82.2vh;
+
+
+}
+/* Fondo */
+.fond{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+/* Texto */
+.text{
+    display: flex;
+    position: absolute;
+    color: #C0B283;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    bottom: 11rem;
+    right: 7.5rem;
+}
+/* Imagenes */
+.cont-img{
+    display: flex;
+    position: absolute;
+    gap: 50px;
+    right: 4rem;
+    bottom: 4rem;
+    justify-content: space-evenly;
+}
+.img-paises{
+    width: 7rem;
+    height: 7rem;
+}
+/* Caja Principal */
+.cont-prin{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 33rem;
+    flex-shrink: 0;
+}
+/* Texto Principal */
+.tex-pri{
+    display: flex;
+    position: absolute;
+    width: auto;
+    height: auto;
+    padding-top: 1.5rem;
+    font-size: 1.8rem;
+    left: 3rem;
+    font-family: 'Open Sans', sans-serif;
+}
+/* Articulo 1*/
+.art{
+    display: inline-table;
+    position: relative;
+    width: 30rem;
+    height: 27rem;
+    margin-top: 4.5rem;
+    background-color: #3E3737;
+}
+/* Caja de Img */
+.caja-img{
+    display: flex;
+    width: 26rem;
+    height: 18rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    background-color: #C0B283;
+}
+/* IMG */
+.img{
+    width: 100%;
+    height: auto;
+}
+/* img-nube */
+.img-nube{
+    position: absolute;
+    right: 3rem;
+    bottom: 8rem;
+}
+/* Caja Texto */
+.caja-text{
+    display: table;
+    left: 1rem;
+    width: 41%;
+    height: auto;
+    margin-left: 9rem;
+    margin-top: 1.5rem;
+    text-align: center;
+    color: white;
+    font-size: 0.8rem;
+    font-family: 'Open Sans', sans-serif; 
+}
+/* Texto */
+.text.cat{
+    width: auto;
+    height: auto;  
+}
+/* Footer */
+footer {
+    width: 100%;
+    height: 276px;
+    background-color: #1E1E1E;
+}
+.barra-footer {
+    width: 100%;
+    height: 52px;
+    background-color: #3E3737;
+    align-items: center;
+    text-align: center;
+}
+.barra-footer h2 {
+    color: #EAB609;
+    padding: 6px;
+    font-weight: normal;
+    font-size: 35px;
+}
+.pie-pagina {
+    display: flex;
+    width: 100%;
+    height: 246px;
+    background-color: #1E1E1E; 
+}
+.informacion {
+    width: 300px;
+    height: 246px;
+}
+.informacion h2{
+    color: coral;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 42px;
+}
+.informacion ul li{
+    list-style: none;
+    text-align: center;
+    margin: 10px;
+}
+.informacion ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.empresa{
+    width: 300px;
+    height: 246px;
+}
+.empresa h2{
+    color: coral;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 42px;
+}
+
+.empresa ul li{
+    list-style: none;
+    text-align: center;
+    margin: 10px;
+}
+
+.empresa ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+.logo-footer{
+    width: 350px;
+    height: 246px;
+}
+.logo-footer img{
+    width: 350px;
+    align-items: center;
+    margin-top: 70px;
+}
+.redes {
+    width: 360px;
+    height: 246px;
+    align-items: center;
+}
+.redes h2{
+    text-align: center;
+    color: coral;
+    font-size: 25px;
+    margin-top: 40px;
+}
+.redes img{
+    width: 40px;
+    margin: 7px;
+}
+.redes .redes-imagenes{
+    text-align: center;
+    margin-top: 30px;
+}
+footer p{
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    background-color: #3E3737;
+}

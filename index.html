@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Decors Home - SAC</title>
+    <link rel="icon" href="img/DECORS HOUSE logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+
+<body class="p-3 mb-2 header-blue">
+    
+    <header class="container header-Blank" onclick="toggleLoginSection()">
+        <h1>DECORS HOME - SAC</h1>
+    </header>
+    <section class="content-login header-Blank-border">
+        <div class="container-img">
+            <div class="logo">
+                <img class="logo" src="img/DECORS HOUSE png logo.png" alt="Logo">
+            </div>
+
+            <form id="login-form">
+                <h3>Iniciar Sesión</h3>
+                <div class="mb-3">
+                    <label class="form-label">Usuario</label>
+                    <input type="text" class="form-control" placeholder="Escribe tu Usuario" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control" placeholder="Escribe tu Password" required>
+                </div>
+
+                <div class="recordar">¿Olvidó su Password?</div>
+
+                <input type="submit" class="btn btn-primary" value="Login" onclick="login()">
+
+                <div class="registrarse">
+                    <a href="#">Crear cuenta nueva</a>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section class="content" id="registration-form">
+        <div class="container-log">
+            <h2>Crear cuenta nueva</h2>
+
+            <form class="form">
+                <div class="mb-4">
+                    <label class="form-label">Nombres</label>
+                    <input type="text" class="form-control" placeholder="Escribe tus Nombres" title="Nombres?" required>
+                </div>
+                <div class="mb-4">
+                    <label class="form-label">Apellidos</label>
+                    <input type="text" class="form-control" placeholder="Escribe tus Apellidos" title="Apellidos?"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <label for="date">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" id="date" placeholder="*" title="Date">
+                </div>
+                <div class="mb-4">
+                    <label class="form-label">Usuario</label>
+                    <input type="text" class="form-control" placeholder="Escribe tu Usuario" title="Usuario?" required>
+                </div>
+                <div class="mb-4">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control" placeholder="Escribe tu Password" title="Password?"
+                        required>
+                </div>
+                <input class="btn btn-primary" type="submit" value="Crear cuenta" onclick="loggin()"
+                    title="Crear cuenta">
+            </form>
+        </div>
+    </section>
+    <script>
+        function toggleLoginSection() {
+            const header = document.querySelector('.header-Blank');
+            const loginSection = document.querySelector('.content-login');
+
+            loginSection.style.display = (loginSection.style.display === 'block' ? 'none' : 'block');
+        }
+    </script>
+    <script>
+        const container = document.querySelector('.container');
+        const containerInitialTop = container.style.top;
+
+        function animateContainerUp() {
+            // Hide the content-login element initially
+            document.querySelector('.content-login').style.display = 'none';
+
+            // Animate the container element upwards
+            container.style.top = 0;
+            container.style.transition = 'top 0.3s ease-in-out';
+
+            // After the animation completes, show the content-login element
+            setTimeout(() => {
+                document.querySelector('.content-login').style.display = 'block';
+            }, 300); // Adjust the delay as needed
+        }
+
+        container.addEventListener('click', animateContainerUp);
+
+    </script>
+
+    <script>
+        function toggleRegistrationSection() {
+            const registrationSection = document.querySelector('#registration-form');
+
+            if (registrationSection.style.display === 'block') {
+                registrationSection.style.display = 'none';
+            } else {
+                registrationSection.style.display = 'block';
+            }
+        }
+    </script>
+    <script>
+        // Obtener los elementos de los formularios
+        const loginForm = document.getElementById('login-form');
+        const registrationForm = document.getElementById('registration-form');
+
+        // Función para mostrar el formulario de creación de cuenta y ocultar el de inicio de sesión
+        function showRegistrationForm() {
+            loginForm.style.display = 'none';
+            registrationForm.style.display = 'block';
+        }
+
+        // Función para mostrar el formulario de inicio de sesión y ocultar el de creación de cuenta
+        function showLoginForm() {
+            registrationForm.style.display = 'none';
+            loginForm.style.display = 'block';
+        }
+
+        // Asociar el evento click al enlace "Crear cuenta nueva"
+        const createAccountLink = document.querySelector('.registrarse a');
+        createAccountLink.addEventListener('click', showRegistrationForm);
+
+    </script>
+    <script>
+
+        function login() {
+            // Agrega la lógica de inicio de sesión si es necesario
+            alert("¡Iniciar sesión!");
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
