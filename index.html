@@ -3,155 +3,247 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Decors Home - SAC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Decors Home - SAC</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="icon" href="img/DECORS HOUSE logo.png">
+    <link rel="stylesheet" href="css/stylehome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="css/index.css">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
-<body class="p-3 mb-2 header-blue">
-    
-    <header class="container header-Blank" onclick="toggleLoginSection()">
-        <h1>DECORS HOME - SAC</h1>
-    </header>
-    <section class="content-login header-Blank-border">
-        <div class="container-img">
-            <div class="logo">
-                <img class="logo" src="img/DECORS HOUSE png logo.png" alt="Logo">
+<body class="bg-warning-subtle">
+    <nav class="navbar navbar-expand-lg bg-black fixed-top" id="navbar">
+        <div class="container-fluid content">
+            <span class="dropdown">
+                <div id="notification"></div>
+                <a class="navbar-brand text-light" id="navbar-brand" href="index.html">Decors Home - SAC</a>
+                <div class="dropdown-content">
+                    <a href="iniciarsesion.html">Crear Cuenta</a>
+                </div>
+            </span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="#QuienesSomos">¿Quienes Somos?</a>
+                    <a class="nav-link" href="catalogo/catalogo.html">Catalogo</a>
+                    <a class="nav-link" href="#Inspirate">Inspirate</a>
+                    <a class="nav-link" href="#Contacto">Contacto</a>
+                </div>
+                <form class="d-flex ms-auto">
+                    <input class="form-control me-2" type="search" placeholder="Búsqueda" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+                <div class="ms-2">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="moviblelogo" id="cambiarcolor">
+            <img class="logo" src="img/DECORS HOUSE png logo.png" alt="Logo">
+        </div>
+        <header>
+            <i class="fa-solid fa-clock">
+                <hr>
+                <p class="horario">Horario de 9:00 p.m. a 8:00 p.m.</p>
+            </i>
+            <div class="location">
+                <i class="fa-solid fa-location-dot">
+                    <hr>
+                    <p class="lugar">Nuestra Sucursal: Cercado de Lima</p>
+                </i>
+            </div>
+            <div class="preguntas-frecuentes">
+                <i class="fas fa-question">
+                    <hr>
+                    <p class="preguntas">Preguntas Frecuentes</p>
+                </i>
+            </div>
+        </header>
+        <div class="Inicio">
+            <img class="img" src="img/image 1.png" alt="">
+            <h1>LA MEJOR CALIDAD</h1>
+            <h3>PARA TU HOGAR</h3>
+        </div>
+
+        <div class="QuienesSomos">
+            <div class="text-container">
+                <h1 id="QuienesSomos">¿Quiénes somos?</h1>
+                <p class="font">Decors Home, somos una empresa dedicada a la venta de la mejor calidad de acabados para
+                    el
+                    hogar.
+                    Nuestros proveedores nos brindan la mejor calidad en pisos, porcelanatos, fachadas, etc. Perfectos
+                    para
+                    el tomar el gran paso de enchapar nuestro hogar.</p>
+            </div>
+        </div>
+        <div class="cuerpo">
+            <h1 id="Catalogo">Catalogo</h1>
+            <section class="container">
+                <div class="card">
+                    <div class="card-image car-1"></div>
+                    <h2 class="--h2">PORCELANATOS</h2>
+                    <p>Disponemos de una gran cantidad de modelos, tamaños y nacionalidades.</p>
+                    <a href="#">Ver más</a>
+                </div>
+                <div class="card">
+                    <div class="card-image car-2"> </div>
+                    <h2 class="--h2">CERAMICOS</h2>
+                    <p>La mejor calidad y precios de todo tipo, accesible a todos los bolsillos.</p>
+                    <a href="#">Ver más</a>
+                </div>
+                <div class="card">
+                    <div class="card-image car-3"> </div>
+                    <h2 class="--h2">DECORADOS</h2>
+                    <p>Lo mas elegante, perfectos para encajar en tus cocinas, baños, etc.</p>
+                    <a href="#">Ver más</a>
+                </div>
+                <div class="card">
+                    <div class="card-image car-4"></div>
+                    <h2 class="--h2">FACHALETAS</h2>
+                    <p>Decora tus exteriores e interiores con modelos rústicos y elegantes.</p>
+                    <a href="#">Ver más</a>
+                </div>
+                <div class="card">
+                    <div class="card-image car-5"></div>
+                    <h2 class="--h2">SANITARIOS</h2>
+                    <p>La mas grande variedad, y comodidad para tus baños.</p>
+                    <a href="#">Ver más</a>
+                </div>
+            </section>
+        </div>
+
+        <div class="Inspirate">
+            <h1 id="Inspirate">INSPIRATE</h1>
+            <div class="image1">
+                <img src="img/image 9.png" alt="">
+                <p>Te ayudamos a escoger el diseño ideal a tu gusto.
+                    Con la constante recomendación y capacitación de nuestros vendedores.
+                </p>
+            </div>
+            <div class="image2">
+                <img src="img/image 10.png" alt="">
+                <p>Deja que fluya tu creatividad con Nosotros. No solo recomendamos porcelanatos, cerámicos, decorados,
+                    etc. También recomendamos el mejor pegamento
+                    para que tengas una excelente experiencia con nosotros.</p>
+            </div>
+        </div>
+
+        <div class="contact">
+            <p id="Contacto">CONTÁCTANOS</p>
+            <hr>
+        </div>
+
+        <div class="footer">
+            <div class="info">
+                <h3>Informacion</h3>
+                <p>Preguntas Frecuentes</p>
+                <a href="#QuienesSomos">¿Quienes Somos?</a>
+                <p>Nuestra Sucursal</p>
             </div>
 
-            <form id="login-form">
-                <h3>Iniciar Sesión</h3>
-                <div class="mb-3">
-                    <label class="form-label">Usuario</label>
-                    <input type="text" class="form-control" placeholder="Escribe tu Usuario" required>
-                </div>
+            <div class="empresa">
+                <h3>EMPRESA</h3>
+                <a href="catalogo/catalogo.html">Catalogo</a>
+                <a href="#Inspirate">Inspirate</a>
+            </div>
 
-                <div class="mb-3">
-                    <label class="form-label">Password</label>
-                    <input type="password" class="form-control" placeholder="Escribe tu Password" required>
-                </div>
+            <div class="imagen">
+                <img src="img/DECORS HOUSE logo.png" alt="">
+            </div>
 
-                <div class="recordar">¿Olvidó su Password?</div>
+            <div class="redessociales">
+                <h3>Síguenos en nuestras
+                    redes sociales:
+                </h3>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
 
-                <input type="submit" class="btn btn-primary" value="Login" onclick="login()">
-
-                <div class="registrarse">
-                    <a href="#">Crear cuenta nueva</a>
-                </div>
-            </form>
+            <div class="copy">
+                <p>Copyright © 2023 DECORS HOME-Perú. Todos los derechos reservados-Políticas de privacidad</p>
+            </div>
         </div>
-    </section>
-    <section class="content" id="registration-form">
-        <div class="container-log">
-            <h2>Crear cuenta nueva</h2>
 
-            <form class="form">
-                <div class="mb-4">
-                    <label class="form-label">Nombres</label>
-                    <input type="text" class="form-control" placeholder="Escribe tus Nombres" title="Nombres?" required>
-                </div>
-                <div class="mb-4">
-                    <label class="form-label">Apellidos</label>
-                    <input type="text" class="form-control" placeholder="Escribe tus Apellidos" title="Apellidos?"
-                        required>
-                </div>
-                <div class="mb-4">
-                    <label for="date">Fecha de Nacimiento</label>
-                    <input type="date" class="form-control" id="date" placeholder="*" title="Date">
-                </div>
-                <div class="mb-4">
-                    <label class="form-label">Usuario</label>
-                    <input type="text" class="form-control" placeholder="Escribe tu Usuario" title="Usuario?" required>
-                </div>
-                <div class="mb-4">
-                    <label class="form-label">Password</label>
-                    <input type="password" class="form-control" placeholder="Escribe tu Password" title="Password?"
-                        required>
-                </div>
-                <input class="btn btn-primary" type="submit" value="Crear cuenta" onclick="loggin()"
-                    title="Crear cuenta">
-            </form>
-        </div>
-    </section>
+    </div>
     <script>
-        function toggleLoginSection() {
-            const header = document.querySelector('.header-Blank');
-            const loginSection = document.querySelector('.content-login');
+        document.addEventListener('DOMContentLoaded', function () {
+            var logo = document.querySelector('.logo');
+            var cambio = false;
 
-            loginSection.style.display = (loginSection.style.display === 'block' ? 'none' : 'block');
-        }
-    </script>
-    <script>
-        const container = document.querySelector('.container');
-        const containerInitialTop = container.style.top;
-
-        function animateContainerUp() {
-            // Hide the content-login element initially
-            document.querySelector('.content-login').style.display = 'none';
-
-            // Animate the container element upwards
-            container.style.top = 0;
-            container.style.transition = 'top 0.3s ease-in-out';
-
-            // After the animation completes, show the content-login element
-            setTimeout(() => {
-                document.querySelector('.content-login').style.display = 'block';
-            }, 300); // Adjust the delay as needed
-        }
-
-        container.addEventListener('click', animateContainerUp);
+            logo.addEventListener('click', function () {
+                cambio = !cambio;
+                if (cambio) {
+                    logo.classList.add('cambio-imagen');
+                } else {
+                    logo.classList.remove('cambio-imagen');
+                }
+            });
+        });
 
     </script>
 
     <script>
-        function toggleRegistrationSection() {
-            const registrationSection = document.querySelector('#registration-form');
+        document.addEventListener('DOMContentLoaded', function () {
+            var moviblelogo = document.getElementById('cambiarcolor');
+            var cambio = false;
 
-            if (registrationSection.style.display === 'block') {
-                registrationSection.style.display = 'none';
+            moviblelogo.addEventListener('click', function () {
+                cambio = !cambio;
+                if (cambio) {
+                    moviblelogo.classList.add('cambio-fondo');
+                } else {
+                    moviblelogo.classList.remove('cambio-fondo');
+                }
+            });
+        });
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#bars").click(function () {
+                $(".bars-menu").toggle();
+            });
+        });
+    </script>
+    <script>
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 100) {
+                document.getElementById("navbar").classList.add("scrolled");
             } else {
-                registrationSection.style.display = 'block';
+                document.getElementById("navbar").classList.remove("scrolled");
             }
-        }
+        });
+
+
     </script>
+
     <script>
-        // Obtener los elementos de los formularios
-        const loginForm = document.getElementById('login-form');
-        const registrationForm = document.getElementById('registration-form');
+        // Obtener el nombre de la cuenta almacenado en localStorage
+        const nombreCuenta = localStorage.getItem('nombreCuenta');
 
-        // Función para mostrar el formulario de creación de cuenta y ocultar el de inicio de sesión
-        function showRegistrationForm() {
-            loginForm.style.display = 'none';
-            registrationForm.style.display = 'block';
-        }
+        // Mostrar la notificación si hay un nombre de cuenta
+        if (nombreCuenta) {
+            document.getElementById("notification").innerHTML = "Bienvenido, " + nombreCuenta + "!";
+            document.getElementById("notification").style.display = "block";
 
-        // Función para mostrar el formulario de inicio de sesión y ocultar el de creación de cuenta
-        function showLoginForm() {
-            registrationForm.style.display = 'none';
-            loginForm.style.display = 'block';
-        }
-
-        // Asociar el evento click al enlace "Crear cuenta nueva"
-        const createAccountLink = document.querySelector('.registrarse a');
-        createAccountLink.addEventListener('click', showRegistrationForm);
-
-    </script>
-    <script>
-
-        function login() {
-            // Agrega la lógica de inicio de sesión si es necesario
-            alert("¡Iniciar sesión!");
-            window.location.href = "decorshome.html";
-
+            // Limpiar el nombre de cuenta almacenado para que no se muestre nuevamente
+            localStorage.removeItem('nombreCuenta');
         }
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

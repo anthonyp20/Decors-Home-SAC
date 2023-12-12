@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Decors Home - SAC</title>
+    <link rel="icon" href="img/DECORS HOUSE logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/inciosesion.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+
+<body class="p-3 mb-2 header-blue">
+
+    <hgroup>
+        <h1>Crear Cuenta</h1>
+    </hgroup>
+    <form id="registrationForm">
+        <div class="group">
+            <input type="text" id="nombreInput" placeholder="*"><span class="highlight"></span><span class="bar"></span>
+            <label>Nombres</label>
+        </div>
+        <div class="group">
+            <input type="number" id="celularInput" placeholder="*"><span class="highlight"></span><span
+                class="bar"></span>
+            <label>Numero Celular</label>
+        </div>
+        <button type="button" class="button buttonBlue" onclick="registrarUsuario()">
+            Entrar
+            <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+        </button>
+    </form>
+    <footer>
+        <p>Decors Home - SAC</p>
+        <img src="img/DECORS HOUSE logo.png" alt="">
+    </footer>
+
+
+
+
+    <script>
+        function registrarUsuario() {
+            // Obtener los valores de los campos de entrada
+            var nombre = document.getElementById("nombreInput").value;
+
+            // Puedes realizar alguna validación aquí si es necesario
+
+            // Almacenar el nombre en localStorage
+            localStorage.setItem('nombreCuenta', nombre);
+
+            // Redirigir a la página principal
+            window.location.href = "index.html";
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

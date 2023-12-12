@@ -94,6 +94,40 @@ p {
 }
 
 /*barra*/
+#notification{
+  color: #000;
+  background: #fff;
+  border-radius: 20px 20px 0 0;
+  padding: 10px;
+  position: relative;
+  display: none;
+  margin-top: 10px;
+}
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+#navbar.scrolled {
+    transform: translateY(-220px);
+}
+
+#navbar.scrolled .navbar-nav .nav-link {
+    opacity: 0.5;
+}
+
+#navbar.scrolled .navbar-brand {
+    opacity: 1;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
 .navbar {
     background-color: #fff;
     border-radius: 0 0 20px 20px;
@@ -118,6 +152,7 @@ p {
 }
 
 .navbar-nav .nav-link:hover {
+    background: #3c3c3c;
     color: #007bff;
     /* Change color on hover */
 }
@@ -138,6 +173,59 @@ p {
 .fa-shopping-cart:hover {
     color: #0056b3;
     /* Change color on hover */
+}
+
+/**/
+/* Estilos para el desplegable */
+.dropdown {
+    position: relative;
+    display: inline;
+    inset-inline-start: 15px;
+    margin: 45px;
+    align-items: center;
+}
+
+.fa-caret-down {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 25px;
+    /* Ajusta el espaciado entre el ícono y el texto */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1a1919;
+    /* Cambia el color de fondo del desplegable */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: white;
+    /* Cambia el color del texto de los botones */
+    padding: 14px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+    /* Cambia el color de fondo al pasar el ratón sobre los botones */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 
@@ -520,17 +608,72 @@ QuienesSomos .text-container {
     }
 
     .navbar-nav .nav-link:hover {
+        background: #3c3c3c;
         color: #007bff;
         /* Change color on hover */
     }
 
+    /* Estilos para el desplegable */
+    .dropdown {
+        position: relative;
+        display: inline;
+        inset-inline-start: 15px;
+        margin: 50px;
+        align-items: center;
+    }
+
+    .fa-caret-down {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 25px;
+        /* Ajusta el espaciado entre el ícono y el texto */
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #1a1919;
+        /* Cambia el color de fondo del desplegable */
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 5px;
+    }
+
+    .dropdown-content a {
+        color: white;
+        /* Cambia el color del texto de los botones */
+        padding: 12px 16px;
+        border-radius: 5px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border: none;
+        width: 100%;
+        text-align: left;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #555;
+        /* Cambia el color de fondo al pasar el ratón sobre los botones */
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+
     /* Style the search input and button */
-    form{
+    form {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
     }
+
     .form-control {
         margin: 5px;
         margin-top: 15px;
@@ -540,7 +683,7 @@ QuienesSomos .text-container {
     /* Style the shopping cart icon */
     .fa-shopping-cart {
         position: relative;
-        margin-top:10px ;
+        margin-top: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -695,12 +838,13 @@ QuienesSomos .text-container {
     }
 
     /* Style the search input and button */
-    form{
+    form {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
     }
+
     .form-control {
         margin: 5px;
         margin-top: 15px;
@@ -710,7 +854,7 @@ QuienesSomos .text-container {
     /* Style the shopping cart icon */
     .fa-shopping-cart {
         position: relative;
-        margin-top:10px ;
+        margin-top: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -724,6 +868,7 @@ QuienesSomos .text-container {
         color: #0056b3;
         /* Change color on hover */
     }
+
     .moviblelogo .logo {
         height: 70px;
     }
