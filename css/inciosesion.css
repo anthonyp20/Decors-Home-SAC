@@ -1,83 +1,101 @@
-* { box-sizing:border-box; }
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: content-box;
+}
 
 body {
 	font-family: Helvetica;
 
 }
-.header-blue{
-    background: #181818;
+
+.header-blue {
+	background: #181818;
 	border-radius: 20px 20px 0 0;
 }
 
 header {
-    display: flex;
+	display: flex;
 	align-items: center;
 	justify-content: center;
-	text-align:center;
+	text-align: center;
 	cursor: pointer;
-	padding: 20px 0 0 0 ;
+	padding: 20px 0 0 0;
 }
 
-h1, span { font-weight: 300; }
-
-h1 { color: #727070;
-    background: #282828;
-    border-radius: 10px;
+h1,
+span {
+	font-weight: 300;
 }
 
-span { color: #4a89dc; }
+h1 {
+	color: #727070;
+	background: #282828;
+	border-radius: 10px;
+}
+
+span {
+	color: #4a89dc;
+}
 
 form {
-    border-radius: 10px;
+	border-radius: 10px;
 	width: 380px;
 	margin: 4em auto;
 	padding: 3em 2em 2em 2em;
-	background: #fafafa;
+	background: #202020;
 	border: 1px solid #ebebeb;
-	box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
+	box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 1px 0px, rgba(0, 0, 0, 0.09804) 0px 1px 2px 0px;
 }
 
-.group { 
-	position: relative; 
-	margin-bottom: 45px; 
+.group {
+	position: relative;
+	margin-bottom: 45px;
 }
 
 input {
 	font-size: 18px;
 	padding: 10px 10px 10px 5px;
 	display: block;
-	background: #fafafa;
-	color: #636363;
+	background: transparent;
+	color: #ffff;
 	width: 100%;
 	border: none;
-	border-radius: 0;
 	border-bottom: 1px solid #757575;
+	padding-inline-start: 190px;
+	border-radius: 20px 20px 0 0;
+    
 }
+input:focus {
+	outline: none;
 
-input:focus { outline: none; }
+}
 
 
 /* Label */
 
 label {
-	color: #999; 
+	color: #5b5a5a;
 	font-size: 18px;
 	font-weight: normal;
 	position: absolute;
 	pointer-events: none;
-	left: 18px;
-	top: 12px;
+	left: 10px;
+	top: 9px;
 	transition: all 0.2s ease;
+	
 }
-
 
 /* active */
 
-input:focus ~ label, input.used ~ label {
-	top: -20px;
-  transform: scale(.75); left: 2px;
+input:focus~label,
+input.used~label {
+	top: -35px;
+	transform: scale(.75);
+	left: 2px;
 	/* font-size: 14px; */
 	color: #4a89dc;
+	border-radius: 20px;
 }
 
 
@@ -87,35 +105,48 @@ input:focus ~ label, input.used ~ label {
 	position: relative;
 	display: block;
 	width: 100%;
+	
 }
 
-.bar:before, .bar:after {
+.bar:before,
+.bar:after {
 	content: '';
-	height: 2px; 
+	height: 2px;
 	width: 0;
-	bottom: 1px; 
+	bottom: 1px;
 	position: absolute;
-	background: #4a89dc; 
+	background: #4a89dc;
 	transition: all 0.2s ease;
+	
 }
 
-.bar:before { left: 50%; }
+.bar:before {
+	left: 50%;
+	
+}
 
-.bar:after { right: 50%; }
+.bar:after {
+	right: 50%;
+	
+}
 
 
 /* active */
 
-input:focus ~ .bar:before, input:focus ~ .bar:after { width: 50%; }
+input:focus~.bar:before,
+input:focus~.bar:after {
+	width: 50%;
+	
+}
 
 
 /* Highlight */
 
 .highlight {
 	position: absolute;
-	height: 60%; 
-	width: 100px; 
-	top: 25%; 
+	height: 60%;
+	width: 100px;
+	top: 50%;
 	left: 0;
 	pointer-events: none;
 	opacity: 0.5;
@@ -124,100 +155,139 @@ input:focus ~ .bar:before, input:focus ~ .bar:after { width: 50%; }
 
 /* active */
 
-input:focus ~ .highlight {
+input:focus~.highlight {
 	animation: inputHighlighter 0.3s ease;
+	
 }
 
 
 /* Animations */
 
 @keyframes inputHighlighter {
-	from { background: #4a89dc; }
-	to 	{ width: 0; background: transparent; }
+	from {
+	
+		background: #4a89dc;
+		
+	}
+
+	to {
+		width: 0;
+		background: transparent;
+		
+	
+	}
 }
 
-
+/*olvido password*/
+.olvidopassword{
+	position:absolute;
+	margin-left: 65px;
+    margin-top: -25px;
+}
+.olvidopassword .olvido-password{
+	display: inline-block;
+	color:#fff;
+	font-size: 1em;
+	text-decoration: none;
+}
+.olvidopassword .olvido-password:hover{
+	color:#ddd;
+    text-decoration: underline;
+}
 /* Button */
 
 .button {
-  position: relative;
-  display: inline-block;
-  padding: 12px 24px;
-  margin: .3em 0 1em 0;
-  width: 100%;
-  vertical-align: middle;
-  color: #fff;
-  font-size: 16px;
-  line-height: 20px;
-  -webkit-font-smoothing: antialiased;
-  text-align: center;
-  letter-spacing: 1px;
-  background: transparent;
-  border: 0;
-  border-bottom: 2px solid #3160B6;
-  cursor: pointer;
-  transition: all 0.15s ease;
+	border-radius: 20px;
+	position: relative;
+	display: inline-block;
+	padding: 12px 24px;
+	margin: .3em 0 1em 0;
+	margin-top: 15px;
+	width: 100%;
+	vertical-align: middle;
+	color: #fff;
+	font-size: 16px;
+	line-height: 20px;
+	-webkit-font-smoothing: antialiased;
+	text-align: center;
+	letter-spacing: 1px;
+	background: transparent;
+	border: 0;
+	border-bottom: 2px solid #3160B6;
+	cursor: pointer;
+	transition: all 0.15s ease;
 }
-.button:focus { outline: 0; }
+
+.button:focus {
+	outline: 0;
+}
 
 
 /* Button modifiers */
 
 .buttonBlue {
-  background: #4a89dc;
-  text-shadow: 1px 1px 0 rgba(39, 110, 204, .5);
+	background: #4a89dc;
+	text-shadow: 1px 1px 0 rgba(39, 110, 204, .5);
 }
 
-.buttonBlue:hover { background: #357bd8; }
+.buttonBlue:hover {
+	background: #357bd8;
+}
 
 
 /* Ripples container */
 
 .ripples {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: transparent;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: transparent;
 }
 
 
 /* Ripples circle */
 
 .ripplesCircle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.25);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	width: 0;
+	height: 0;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.25);
 }
 
 .ripples.is-active .ripplesCircle {
-  animation: ripples .4s ease-in;
+	animation: ripples .4s ease-in;
 }
 
 
 /* Ripples animation */
 
 @keyframes ripples {
-  0% { opacity: 0; }
+	0% {
+		opacity: 0;
+	}
 
-  25% { opacity: 1; }
+	25% {
+		opacity: 1;
+	}
 
-  100% {
-    width: 200%;
-    padding-bottom: 200%;
-    opacity: 0;
-  }
+	100% {
+		width: 200%;
+		padding-bottom: 200%;
+		opacity: 0;
+	}
 }
 
-footer { text-align: center; }
+footer {
+	text-align: center;
+}
 
 footer p {
 	color: #888;
@@ -241,6 +311,11 @@ footer img {
 	transition: all .2s ease;
 }
 
-footer img:hover { opacity: .83; }
+footer img:hover {
+	opacity: .83;
+}
 
-footer img:focus , footer a:focus { outline: none; }
+footer img:focus,
+footer a:focus {
+	outline: none;
+}
