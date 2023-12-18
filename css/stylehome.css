@@ -567,7 +567,13 @@ QuienesSomos .text-container {
 }
 
 
+.ubicacion{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100px;
 
+}
 
 /* Responsive Styles for Mobile Devices */
 @media (max-width: 768px) {
@@ -792,6 +798,14 @@ QuienesSomos .text-container {
         height: 50px;
         width: 50px;
     }
+
+    .ubicacion{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 80px;
+    
+    }
 }
 
 /* Responsive Styles for Tablet Devices */
@@ -938,5 +952,13 @@ QuienesSomos .text-container {
     .footer .imagen img {
         height: 75px;
         width: 75px;
+    }
+
+    .ubicacion{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 60px;
+    
     }
 }
